@@ -2,9 +2,9 @@
   "name": "jsonic-cli",
   "version": "1.0.0",
   "description": "simple shell command to call jsonic",
-  "bin": "cli.js",
+  "bin": { "jsonic": "cli.js" },
   "scripts": {
-    "test": "npx standard && npx tap --cov test*.js test/*.js"
+    "test": "sh test.js"
   },
   "repository": {
     "type": "git",
