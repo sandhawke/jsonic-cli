@@ -27,14 +27,26 @@ yargs
 const argv = yargs.argv
 
 async function main() {
+  let str,obj
   let source = process.stdin
   let filename = argv._.shift()
   if (filename) {
     source = fs.createReadStream(filename)
   }
+
+  try {
+    str = await streamString(source)
+  } catch (e) {
+    console.error('Error reading input:', e)
+    return
+  }
   
-  const str = await streamString(source)
-  const obj = jsonic(str)
+  try {
+    obj = await jsonic(str)
+  } catch (e) {
+    console.error('jsonic error: ', e)
+    return
+  }
   
   let out
   if (argv.jsonic) {
@@ -51,4 +63,3 @@ async function main() {
 }
 
 main()
-
