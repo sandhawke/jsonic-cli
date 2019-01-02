@@ -1,8 +1,10 @@
 {
   "name": "jsonic-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple shell command to call jsonic",
-  "bin": { "jsonic": "cli.js" },
+  "bin": {
+    "jsonic": "cli.js"
+  },
   "scripts": {
     "test": "sh test.js"
   },
