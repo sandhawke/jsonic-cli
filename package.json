@@ -1,0 +1,31 @@
+{
+  "name": "jsonic-cli",
+  "version": "0.0.0",
+  "description": "simple shell command to call jsonic",
+  "bin": "cli.js",
+  "scripts": {
+    "test": "npx standard && npx tap --cov test*.js test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandhawke/jsonic-cli.git"
+  },
+  "keywords": [
+    "sandhawke"
+  ],
+  "author": "Sandro Hawke (http://hawke.org/sandro)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandhawke/jsonic-cli/issues"
+  },
+  "homepage": "https://github.com/sandhawke/jsonic-cli#readme",
+  "devDependencies": {
+    "tape": "^4.9.1"
+  },
+  "dependencies": {
+    "debug": "^4.1.0",
+    "jsonic": "^0.3.1",
+    "stream-string": "^2.0.1",
+    "yargs": "^12.0.5"
+  }
+}
